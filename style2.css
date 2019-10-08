@@ -1,0 +1,28 @@
+.card {
+    height: 560px;
+    margin-top: 5px;
+    margin-bottom: auto;
+    width: 400px;
+    background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.container {
+    height: 100%;
+    align-content: center;
+}
+
+body {
+    width: 100%;
+    background-image: url("img/back-groud.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
+#cadastrotopo {
+    color: whitesmoke;
+}
+
+.label {
+    color: whitesmoke;
+}

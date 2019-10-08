@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="../ProjetoIntegradorIesb/bootstrap-4.3.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../ProjetoIntegradorIesb/style2.css">
+</head>
+
+
+<body>
+    <div>
+        <div>
+            <center>
+                <h2 id="cadastrotopo">Cadastro de Usuário</h2>
+            </center>
+        </div>
+        <form action="">
+            <div class="container">
+                <div class="d-flex justify-content-center h-100">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="input-group form-group">
+                                <div style="margin-top: 1px" class="form-group">
+                                    <label class="label">Login:</label>
+                                    <input required name="login" class="form-control" type="text" placeholder="Digite seu login">
+                                </div>
+                                <div class="form-group">
+                                    <label class="label" for=" exampleFormControlInput1 ">Digite uma senha:</label>
+                                    <input required name="senha " class="form-control " type="text " placeholder="Digite uma senha ">
+                                </div>
+                                <div class="form-group ">
+                                    <label class="label">Confirme a senha:</label>
+                                    <input required name="confirma" class="form-control" type="text" placeholder="Confirme a senha utilizada">
+                                </div>
+                                <div class="form-group">
+                                    <label class="label" for=" exampleFormControlInput1 ">Email:</label>
+                                    <input required type="email " class="form-control " id="exampleFormControlInput1 " placeholder="nome@exemplo.com ">
+                                </div>
+                                <div class="form-group ">
+                                    <label class="label">Informe um numero para contato:</label>
+                                    <input required name="contato" class="form-control" type="text" placeholder="(DDD) XXXX-XXXX">
+                                </div>
+                                <div style="position: relative; left: 1px;" class="form-check">
+                                    <label class="label"> Sexo:</label>
+                                    <input required id="Feminino" type="radio" name="Sexo" value="F"><label class="label" for="Feminino">Feminino</label>
+                                    <input required id="Masculino" type="radio" name="Sexo" value="M"><label class="label" for="Masculino">Masculino</label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="label" for="exampleFormControlFile1">Escolha uma foto:</label>
+                                    <input style="color: whitesmoke" required type="file" class="form-control-file">
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <button style="position: relative; left: 450px;" type="submit" class="btn btn-primary">Fazer Cadastro</button>
+                    <a href="index.html"><button style="position: relative; left: 450px;" type="button" class="btn btn-secondary">Voltar</button></a>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+
+</html>

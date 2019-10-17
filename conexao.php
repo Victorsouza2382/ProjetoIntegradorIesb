@@ -1,21 +1,27 @@
 <?php
     class Conexao {
 	
-        private $host 	  = 'forumpi';
+        private $host 	  = 'localhost';
         private $user 	  = 'root';
         private $password = '';
         private $db       = 'forumpi';
         
         protected $conexao;
+        public function getConexao(){ 
+            
+            return $this->conexao;
+        }
         
         public function conectar()
         {
             $this->conexao = new PDO('mysql:host=' . $this->host . ';dbname=' . $this->db . ';charset=utf8', $this->user, $this->password);
+            return $this;
         }
         
         public function desconectar()
         {
             $this->conexao = null;
+
         }
         
         public function executar($sql)

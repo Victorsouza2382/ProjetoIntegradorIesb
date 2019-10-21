@@ -6,25 +6,14 @@
     <meta charset="UTF-8">
     <title>Kill Fire</title>
     <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
-    <style>
-        body {
-            background: #848484;
-        }
-        
-        .card {
-            height: auto;
-            margin-top: 25px;
-            margin-bottom: auto;
-            width: 300px;
-            background-color: rgba(0, 0, 0, 0.5) !important;
-        }
-    </style>
+    <link rel="stylesheet" href="css/pagina_inicial.css">
 </head>
 
-<body class="d-flex flex-column h-100">
+<body class="d-flex flex-column h-100 ">
     <header>
-        <!-- Menu do Forum -->
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        
+        <!-- Menu do Forum -->  
+        <nav class="navbar navbar-expand-md fixed-top navbar-white bg-white">
             <a class="navbar-brand" href="#">Kill Fire</a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,35 +22,100 @@
 
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><button type="button" class="btn btn-secondary btn-sm">Página inicial</button></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><button type="button" class="btn btn-secondary btn-sm">Conteudo 1</button></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><button type="button" class="btn btn-secondary btn-sm">Conteudo 2</button></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><button type="button" class="btn btn-secondary btn-sm">Conteudo 3</button></a>
-                    </li>
-                </ul>
-
-                <form class="form-inline mt-2 mt-md-0">
-
-                    <input class="form-control mr-sm-2" type="text" placeholder="Pesquisa" aria-label="">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+                <form class="form-inline mt-2 mt-md-0 ml-auto">
+                        <input class="form-control mr-sm-2 form-control-sm" type="search" placeholder="Pesquisa" aria-label="">
+                        <button class="btn btn-outline-success btn-sm" type="submit">Buscar</button>
                 </form>
+                <div class="ml-auto">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><button type="button" class="btn btn-outline-danger btn-md">Login</button></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><button type="button" class="btn btn-outline-danger btn-md">Register</button></a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
-    </header><br>
-    <div id="divtopo"><br>
-        <center>
-            <img class="card" src="/img/Logo Kill Fire.png" alt="">
-        </center>
+    </header>
+    <div id="divtopo" class="row mb-5 "><br>
+        <div id="post_inicial" class="col-lg-12 d-flex align-items-center justify-content-center  flex-column">
+            <h2 >Bem-vindo a Kill fire</h2>
+            <p>Melhor Forum de jogos da internet</p>
+            <a href="cadastro.html" class="btn btn-danger">Sing up</a>
+        </div>           
     </div>
+    <div class="container">
+        <h1 class="mb-5" style="font-size: 1.2rem;">Gamming Forums</h1>
+        
+        <h3 class="mb-3" style="font-size: 1rem;">Discussao</h3>   
 
+        
+        <div class="row mb-5" id="">
+            <a href="#">
+                <div class="col-lg-4 painel mr-3 mb-2 rounded">
+                        <div>
+                            <h5 class="">Forum no geral</h5>
+                            <p class="">Dados sobre esse tipo de forum.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vehicula, sapien ac semper
+                                        bibendum, tortor nisl sollicitudin tellus, a commodo magna augue quis metu</p>
+                        </div>
+                        <div class="">
+                            <a href="#">Go somewhere</a>
+                      </div>
+                    </div>
+            </a>
+            <a href="#">
+                <div class="col-lg-4 painel mr-3 mb-2 rounded">
+                   <div>
+                        <h5 class="">Forum sobre jogos</h5>
+                        <p class="">Dados sobre esse tipo de forum.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vehicula, sapien ac semper
+                                        bibendum, tortor nisl sollicitudin tellus, a commodo magna augue quis metu</p>
+                    </div>
+                    <div class="">
+                        <a href="#">Go somewhere</a>
+                      </div>
+                </div>
+            </a>
+            <div class=" col d-none d-md-block ">
+                <h1>Conteudo lateral</h1>
+            </div>
+        </div>
+
+        <h3 class="mb-3" style="font-size: 1rem;">Quartel General</h3>   
+        
+        <div class="row">         
+            <a href="#">
+                <div class="col-lg-4 painel mr-3 mb-2 rounded">
+                    <div>
+                        <h5 class="">Forum no geral</h5>
+                        <p class="">Dados sobre esse tipo de forum.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vehicula, sapien ac semper
+                            bibendum, tortor nisl sollicitudin tellus, a commodo magna augue quis metu</p>
+                    </div>
+                    <div class="">
+                        <a href="#">Go somewhere</a>
+                    </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="col-lg-4 painel mr-3 mb-2 rounded">
+                    <div>
+                        <h5 class="">Forum sobre jogos</h5>
+                        <p class="">Dados sobre esse tipo de forum.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vehicula, sapien ac semper
+                                bibendum, tortor nisl sollicitudin tellus, a commodo magna augue quis metu</p>
+                    </div>
+                    <div class="">
+                        <a href="#">Go somewhere</a>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    
 </body>
 
 </html>

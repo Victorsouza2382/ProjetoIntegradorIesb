@@ -1,0 +1,35 @@
+.container {
+    height: 100%;
+    align-content: center;
+}
+
+.card {
+    height: 370px;
+    margin-top: 150px;
+    margin-bottom: auto;
+    width: 400px;
+    background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+body {
+    width: 100%;
+    background-image: url("img/back-groud.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
+input:focus {
+    outline: 0 0 0 0 !important;
+    box-shadow: 0 0 0 0 !important;
+}
+
+#loginimg {
+    padding-left: 25px;
+    padding: 0 auto;
+    height: 180px;
+}
+
+.links {
+    color: white;
+}

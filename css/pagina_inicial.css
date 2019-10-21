@@ -1,0 +1,31 @@
+ /*Configuracao geral */
+ body{
+    margin: 0 auto;
+    background: #F9F9F9;
+    color: #5e5e5e;
+}
+ 
+a{
+     color: #5e5e5e;            
+}
+a:hover{
+     text-decoration: none;
+}
+
+
+ #post_inicial{
+     height: 350px;
+     background-image: url(../img/jf-background.jpg);
+     background-size: cover;
+     color: white;
+ }
+
+ .painel{
+     box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2);
+     background: #ffffff;
+ }
+
+ .navbar-fixed-top.scrolled {
+     background-color: #fff !important;
+     transition: background-color 200ms linear;
+ }

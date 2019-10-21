@@ -14,21 +14,19 @@
     }else{
             $conexao = new Conexao();
             /*$conexao->executar($sql);*/
+            $conexao->conectar();
+            $stmt = $conexao->getConexao();
 
-            $sql = $conexao->conectar()->getConexao()->prepare("insert into usuario (login,senha,email,telefone,sexo) 
+            $sql = $stmt->prepare("
+            insert into usuario (login,senha,email,contato,sexo) 
             values (?,?,?,?,?)");
-            $sql->bindValue(1,'$login');
-            $sql->bindValue(2,'$senha');
-            $sql->bindValue(3,'$email');
-            $sql->bindValue(4,'$contato');
-            $sql->bindValue(5,'$sexo');
-            
-            
+            $sql->bindValue(1, $login);
+            $sql->bindValue(2, $senha);
+            $sql->bindValue(3, $email);
+            $sql->bindValue(4, $contato);
+            $sql->bindValue(5, $sexo);           
 
-            $sql->execute();
-
-           
+            $sql->execute();           
 
             echo "<h2>Cadastro realizado!</h2><br>";
-            /*echo "'$login','$senha','$email','$contato','$sexo'";*/
     }

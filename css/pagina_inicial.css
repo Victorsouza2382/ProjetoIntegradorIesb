@@ -1,31 +1,75 @@
  /*Configuracao geral */
- body{
-    margin: 0 auto;
-    background: #F9F9F9;
-    color: #5e5e5e;
-}
  
-a{
-     color: #5e5e5e;            
-}
-a:hover{
+ body {
+     margin: 0 auto;
+     background: #F9F9F9;
+ }
+ 
+ a {
+     color: #5e5e5e;
+ }
+ 
+ a:hover {
      text-decoration: none;
-}
-
-
- #post_inicial{
-     height: 350px;
-     background-image: url(../img/jf-background.jpg);
+ }
+ 
+ #post_inicial {
+     height: 280px;
+     background-image: url("../img/back-groud.jpg");
      background-size: cover;
      color: white;
  }
-
- .painel{
+ 
+ .painel {
      box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2);
      background: #ffffff;
  }
-
+ 
  .navbar-fixed-top.scrolled {
      background-color: #fff !important;
      transition: background-color 200ms linear;
+ }
+ 
+ #pagilogo {
+     margin: 0 auto;
+     height: 60%;
+     width: 37%;
+ }
+ 
+ .sidebar-container {
+     border-radius: 10px;
+     margin-top: 283px;
+     position: absolute;
+     width: 220px;
+     height: 100%;
+     left: 0;
+     overflow-x: hidden;
+     overflow-y: auto;
+     background: #000000;
+     color: #F9F9F9;
+ }
+ 
+ .content-container {
+     padding-top: 20px;
+ }
+ 
+ .sidebar-navigation {
+     padding: 0;
+     margin: 0;
+     list-style-type: none;
+     position: relative;
+ }
+ 
+ .sidebar-navigation li a {
+     padding: 10px 15px 10px 30px;
+     display: block;
+     color: #F9F9F9;
+ }
+ 
+ .sidebar-navigation li .fa {
+     margin-right: 10px;
+ }
+ 
+ .container {
+     margin: 20%;
  }

@@ -1,50 +1,103 @@
 <!DOCTYPE html>
-<html>
+<!--Inicio do Codigo (feito por Victor De Souza)  -->
+<html lang="pt-br" class="h-100">
 
 <head>
-    <title>Kill Fire</title>
     <meta charset="UTF-8">
+    <title>Kill Fire</title>
+    <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/pagina_inicial.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <link rel="stylesheet" href="../ProjetoIntegradorIesb/style.css">
-    <link rel="stylesheet" href="../ProjetoIntegradorIesb/bootstrap-4.3.1-dist/css/bootstrap.min.css">
-
 </head>
 
-<body>
-    <div class="container">
-        <div class="d-flex justify-content-center h-100">
-            <div class="card">
-                <div>
-                    <img id="loginimg" src="../ProjetoIntegradorIesb/img/Logo Kill Fire.png" alt="KillFire">
-                </div>
-                <div class="card-body">
-                    <form action="login.php" method="POST">
-                        <div class="input-group form-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fas fa-user"></i></span>
-                            </div>
-                            <input type="text" id="Usuariologin" name="login" class="form-control" placeholder="Usuário">
+<body class="d-flex flex-column h-100 ">
+    <header>
 
-                        </div>
-                        <div class="input-group form-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fas fa-key"></i></span>
-                            </div>
-                            <input type="password" id="Senhalogin" name="senha" class="form-control" placeholder="Senha">
-                        </div>
-                        <div class="form-group">
-                            <button type="submit" id="Entrarlogin" class="btn btn-outline-secondary">Entrar</button>
-                        </div>
-                    </form>
-                </div>
-                <div class="card-footer">
-                    <div class="d-flex justify-content-center links">
-                        Não tem conta? <a href="cadastro.html">Cadastre-se</a>
-                    </div>
+        <!-- Menu do Forum -->
+        <nav style="position: absolute;" class="navbar navbar-expand-md fixed-top navbar-size bg-size">
+            <a class="navbar-brand" href="#"><img id="pagilogo" src="../ProjetoIntegradorIesb/img/Logo Kill Fire.png" alt="logo"></a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <form class="form-inline mt-2 mt-md-0 ml-auto">
+                    <input class="form-control mr-sm-2 form-control-sm" type="search" placeholder="Pesquisa" aria-label="">
+                    <button style="margin-right: 300px;" class="btn btn-outline-success btn-sm" type="submit">Buscar</button>
+                </form>
+                <div class="ml-auto">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><button type="button" class="btn btn-outline-primary btn-md">Login</button></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><button type="button" class="btn btn-outline-primary btn-md">Registrar</button></a>
+                        </li>
+                    </ul>
                 </div>
             </div>
+        </nav>
+    </header>
+    <div class="row mb-5 "><br>
+        <div id="post_inicial" class="col-lg-12 d-flex align-items-center justify-content-center  flex-column">
+            <div>
+                <br><br><br><br><br><br>
+                <i style="margin-right: 20px;" class="fa fa-users fa-3x" aria-hidden="true"></i>
+                <i class="fa fa-gamepad fa-5x" aria-hidden="true"></i>
+                <i style="margin-left: 20px;" class="fa fa-comments fa-3x" aria-hidden="true"></i>
+            </div>
+            <div><br>
+                <h5>Forum sobre Games em geral</h5>
+            </div>
+        </div>
+        <div class="sidebar-container">
+
+            <ul class="sidebar-navigation">
+
+                <li>
+                    <a href="#">
+                        <i class="fa fa-comments" aria-hidden="true"></i>
+                        <label>Discussão</label>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                        <label> Agradecimentos</label>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <label>Conta</label>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-file" aria-hidden="true"></i>
+                        <label>Temas</label>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-camera" aria-hidden="true"></i>
+                        <label>Galeria</label>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-info-circle" aria-hidden="true"></i>
+                        <label>Informações</label>
+                    </a>
+                </li>
+            </ul>
         </div>
     </div>
+
+
 </body>
 
 </html>

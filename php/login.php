@@ -1,28 +1,38 @@
 <?php 
     include_once 'conexao.php';
 
-    $login = $_POST['login'];
-    $senha = $_POST['senha'];
+    class login{
+        protected $login;
+        protected $senha;
 
-    $sql = "select * from usuario where email_user='$login' and senha_user='$senha'";
+        function logar($dados){
 
-    $conexao = new Conexao();
-    $conexao->conectar();
-    $stmt=  $conexao->getConexao();
-    
-    $result = $stmt->prepare($sql); 
-     $result->execute();
-    $usuarios = $result->fetchAll($result,PDO::FETCH_OBJ);
-    print_r($usuarios);
-    foreach($usuarios as $usuario){
-        if ($login == $usuario['login'] && $senha == $usuario['senha']){
-            header("paigina.html"); 
+            $conexao = new Conexao();
+            $conexao->conectar();
+            $stmt=$conexao->getConexao();
+            $sql = $stmt->prepare("select * from usuario where login=? and senha=?");
+            $sql->bindValue(1, $dados['login']);
+            $sql->bindValue(2, $dados['senha']);            
+            $sql->execute();
+
+            $usuarios = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+            echo '<pre>';
+            print_r($usuarios); 
+            
+            foreach($usuarios as $usuario){
+                if ($dados['login'] == $usuario['login'] && $dados['senha'] == $usuario['senha']){
+                    header("location: ../index.php?id=$usuario[id_usuario]");
+                    session_start();
+                    $SESSION['id'] = $usuario['id_usuario'];
+                }
+
+            }
         }
-
+        
     }
+    
    
 
-    echo"<script language='javascript' type='text/javascript'>
-    alert('Email e/ou senha incorretos');
-    window.location.href='PaiginaInicial.html';</script>";
+   
     ?>

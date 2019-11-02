@@ -30,12 +30,27 @@
                 </form>
                 <div class="ml-auto">
                     <ul class="navbar-nav mr-auto">
+                        <?php
+                            if(!isset($_GET['id'])){
+                        ?>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><button type="button" class="btn btn-outline-primary btn-md">Login</button></a>
+                            <a class="nav-link" href="paginas/login.html"><button type="button" class="btn btn-outline-primary btn-md" data-toggle="modal" data-target="modal">Login</button></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><button type="button" class="btn btn-outline-primary btn-md">Registrar</button></a>
+                            <a class="nav-link" href="Paginas/cadastro.html"><button type="button" class="btn btn-outline-primary btn-md">Registrar</button></a>
+                        </li>  
+                        <?php
+                            }else{
+                        ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><button type="button" class="btn btn-outline-primary btn-md" data-toggle="modal" data-target="modal">Perfil</button></a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><button type="button" class="btn btn-outline-primary btn-md">Log off</button></a>
+                        </li> 
+                        <?php
+                            }
+                        ?>
                     </ul>
                 </div>
             </div>
@@ -58,46 +73,43 @@
             <ul class="sidebar-navigation">
 
                 <li>
-                    <a href="#">
+                    <a href="Paginas/discussao.html">
                         <i class="fa fa-comments" aria-hidden="true"></i>
-                        <label>Discussão</label>
+                        <span>Discussão</span>
                     </a>
                 </li>
                 <li>
                     <a href="#">
                         <i class="fa fa-thumbs-up" aria-hidden="true"></i>
-                        <label> Agradecimentos</label>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa fa-user" aria-hidden="true"></i>
-                        <label>Conta</label>
+                        <span> Agradecimentos</span>
                     </a>
                 </li>
                 <li>
                     <a href="#">
                         <i class="fa fa-file" aria-hidden="true"></i>
-                        <label>Temas</label>
+                        <span>Temas</span>
                     </a>
                 </li>
                 <li>
                     <a href="#">
                         <i class="fa fa-camera" aria-hidden="true"></i>
-                        <label>Galeria</label>
+                        <span>Galeria</span>
                     </a>
                 </li>
                 <li>
                     <a href="#">
                         <i class="fa fa-info-circle" aria-hidden="true"></i>
-                        <label>Informações</label>
+                        <span>Informações</span>
                     </a>
                 </li>
             </ul>
         </div>
     </div>
+    
 
-
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
 
 </html>

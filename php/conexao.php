@@ -7,6 +7,7 @@
         private $db       = 'forumpi';
         
         protected $conexao;
+        
         public function getConexao(){ 
             
             return $this->conexao;

@@ -1,6 +1,6 @@
 <?php
     include_once 'conexao.php';
-
+    include_once 'foto.php';
     
 
     class Cadastro{
@@ -30,7 +30,6 @@
                 $sql->bindValue(3, $dados['email']);     
     
                 $sql->execute();
-                
                
              echo "<h2>Cadastro realizado!</h2><br>";
             }

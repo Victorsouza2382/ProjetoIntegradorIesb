@@ -7,7 +7,8 @@
         private $db       = 'forumpi';
         
         protected $conexao;
-        
+        protected $id_session;
+
         public function getConexao(){ 
             
             return $this->conexao;
@@ -44,7 +45,27 @@
     
             return $registros;
         }
+
+        function criar_session(){
+            session_start();
+        }
+
+        function set_session_id($dados){
+            $this->id_session = $dados;
+        }
+
+        function get_session_id(){
+            return $this->id_session;
+        }
+        
+        function destruir_session(){
+            session_destroy();
+            header('location: ../index.php');
+        }
+
     }
+
+
 
 
 ?>

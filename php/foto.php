@@ -1,17 +1,18 @@
 <?php
     
     class Foto{
-        protected $foto;
+        protected $local_foto;
     
-        public function adicionarFoto($dados){
+        public function adicionarFoto($local, $dados){
             $conexao = new Conexao();
-            $conexao->getConexao();
-            $stmt = $conexao->conectar();
+            $conexao->conectar();
+            $stmt = $conexao->getConexao();
 
-            $stmt->prepare("insert into foto (local_foto, id_discussao) values(?,?)");
-            $stmt->bindValue(2, $_SESSION['id']);
-            $stmt->execute(); 
+            $sql = $stmt->prepare("insert into foto(id_foto, local_foto, usuario_id_usuario) values(?, ?, ?)");
+            $sql->bindValue(1, $dados);
+            $sql->bindValue(2, $local);
+            $sql->bindValue(3, $dados);
+            $sql->execute(); 
         }
-
     }
 ?>

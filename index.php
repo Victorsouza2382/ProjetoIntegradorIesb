@@ -31,23 +31,23 @@
                 <div class="ml-auto">
                     <ul class="navbar-nav mr-auto">
                         <?php
-                            if(!isset($_GET['id'])){
+                            if(!isset($_GET['logado'])){
                         ?>
-                        <li class="nav-item">
-                            <a class="nav-link" href="paginas/login.php"><button type="button" class="btn btn-outline-primary btn-md" data-toggle="modal" data-target="modal">Login</button></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="Paginas/cadastro.html"><button type="button" class="btn btn-outline-primary btn-md">Registrar</button></a>
-                        </li>  
+                            <li class="nav-item">
+                                <a class="nav-link" href="paginas/login.php"><button type="button" class="btn btn-outline-primary btn-md" data-toggle="modal" data-target="modal">Login</button></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Paginas/cadastro.html"><button type="button" class="btn btn-outline-primary btn-md">Registrar</button></a>
+                            </li>  
                         <?php
                             }else{
                         ?>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><button type="button" class="btn btn-outline-primary btn-md" data-toggle="modal" data-target="modal">Perfil</button></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="php/processamento.php?acao=logoff"><button type="button" class="btn btn-outline-primary btn-md">Log off</button></a>
-                        </li> 
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><button type="button" class="btn btn-outline-primary btn-md" data-toggle="modal" data-target="modal">Perfil</button></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="php/processamento.php?acao=logoff"><button type="button" class="btn btn-outline-primary btn-md">Log off</button></a>
+                            </li> 
                         <?php
                             }
                         ?>
@@ -73,7 +73,7 @@
             <ul class="sidebar-navigation">
 
                 <li>
-                    <a href="Paginas/discussao.html">
+                    <a href="Paginas/discussao.php">
                         <i class="fa fa-comments" aria-hidden="true"></i>
                         <span>Discussão</span>
                     </a>

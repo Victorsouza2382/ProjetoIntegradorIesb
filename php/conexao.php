@@ -1,4 +1,6 @@
 <?php
+    session_start();
+
     class Conexao {
 	
         private $host 	  = 'localhost';
@@ -46,19 +48,12 @@
             return $registros;
         }
 
-        function criar_session(){
+        public function criar_session(){
             session_start();
-        }
-
-        function set_session_id($dados){
-            $this->id_session = $dados;
-        }
-
-        function get_session_id(){
-            return $this->id_session;
+            header('location: ../index.php?logado');
         }
         
-        function destruir_session(){
+        public function destruir_session(){
             session_destroy();
             header('location: ../index.php');
         }

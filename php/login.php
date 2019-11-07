@@ -1,5 +1,6 @@
 <?php 
     include_once 'conexao.php';
+    include_once 'usuario.php';
 
     class Login{
         protected $login;
@@ -23,10 +24,11 @@
             
                 foreach($usuarios as $usuario){
                     
-                    if ($dados['login'] == $usuario['login'] && $dados['senha'] == $usuario['senha']){  
-                        $conexao->criar_session();
-                        $conexao->set_session_id($usuario['id_usuario']);                        
-                        header("location: ../index.php?id=$usuario[id_usuario]");
+                    if ($dados['login'] == $usuario['login'] && $dados['senha'] == $usuario['senha']){ 
+                        $usuario = new Usuario();
+                        $usuario->set_id($dados['login'], $dados['senha']);
+                        $id = $usuario->get_id();
+                        header("location: processamento.php?id=$id");
                     }else{
                         $erro = true;
                     }
@@ -35,6 +37,8 @@
                 $erro = true;   
             }
         }
+
+       
 
         function erro($text){
             if($this->erro){

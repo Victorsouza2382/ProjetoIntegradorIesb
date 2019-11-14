@@ -30,24 +30,18 @@
                         $id = $usuario->get_id();
                         header("location: processamento.php?id=$id");
                     }else{
-                        $erro = true;
+                        $this->erro = true;
                     }
                 }
             }else{
-                $erro = true;   
+                $this->erro = true;  
             }
-        }
 
-       
-
-        function erro($text){
             if($this->erro){
-                echo $text;
-                header("location: ../Paginas/login.php");
+                 header('location: ../Paginas/login.php?erro');
             }
-            
+
         }
-        
     }
     
    

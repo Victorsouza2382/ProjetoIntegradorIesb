@@ -1,3 +1,6 @@
+<?php
+    include_once 'php/conexao.php';
+?>
 <!DOCTYPE html>
 <!--Inicio do Codigo (feito por Victor De Souza)  -->
 <html lang="pt-br" class="h-100">
@@ -37,7 +40,7 @@
                                 <a class="nav-link" href="paginas/login.php"><button type="button" class="btn btn-outline-primary btn-md" data-toggle="modal" data-target="modal">Login</button></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="Paginas/cadastro.html"><button type="button" class="btn btn-outline-primary btn-md">Registrar</button></a>
+                                <a class="nav-link" href="Paginas/cadastro.php"><button type="button" class="btn btn-outline-primary btn-md">Registrar</button></a>
                             </li>  
                         <?php
                             }else{
@@ -71,13 +74,18 @@
         <div class="sidebar-container">
 
             <ul class="sidebar-navigation">
-
-                <li>
-                    <a href="Paginas/discussao.php">
-                        <i class="fa fa-comments" aria-hidden="true"></i>
-                        <span>Discussão</span>
-                    </a>
-                </li>
+                <?php
+                    if(isset($_SESSION['id'])){
+                ?>
+                    <li>
+                        <a href="Paginas/discussao.php">
+                            <i class="fa fa-comments" aria-hidden="true"></i>
+                            <span>Discussão</span>
+                        </a>
+                    </li>
+                <?php
+                    }
+                ?>
                 <li>
                     <a href="#">
                         <i class="fa fa-thumbs-up" aria-hidden="true"></i>
@@ -91,7 +99,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="Paginas\galeria.php">
                         <i class="fa fa-camera" aria-hidden="true"></i>
                         <span>Galeria</span>
                     </a>

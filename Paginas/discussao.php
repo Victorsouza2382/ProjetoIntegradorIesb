@@ -1,3 +1,6 @@
+<?php
+    include_once '../php/discussao.php';
+?>
 <!DOCTYPE html>
 <html>
      <head>
@@ -14,20 +17,12 @@
         <h4>Discussoes</h4>
 
         <!-- listar todas as discussoes-->
-        <!-- <div class="panel-group">
+        <div class="panel-group">
             <?php
-
+                $discussao = new Discussao();
+                $discussao->listarDiscussoes();
             ?>
-                <div class="panel panel-default">
-                    <div class="panel-heading"></div>
-                    <div class="panel-body">
-
-                    </div>
-                </div>
-            <?php
-            
-            ?>
-        </div> -->
+        </div> 
       
 
 

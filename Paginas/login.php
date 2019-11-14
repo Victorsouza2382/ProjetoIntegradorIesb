@@ -33,18 +33,20 @@
                             </div>
                             <input type="password" id="Senhalogin" name="senha" class="form-control" placeholder="Senha">
                         </div>
-                        <div class="form-group">
-                            <button type="submit" id="Entrarlogin" class="btn btn-outline-secondary">Entrar</button>
-                        </div>
                         <?php
-                            $login = new Login();
-                            $login->erro("Usuario ou senha nao existe");
+                            if(isset($_GET['erro'])){
+                                echo "<p style='color:red;'>" . "O usuario ou senha incorreto" . "</p>";
+                            }
                         ?>
+                        <div class="form-group">
+                            <button type="submit"  class="btn btn-outline-secondary">Entrar</button>
+                        </div>
+                       
                     </form>
                 </div>
                 <div class="card-footer">
                     <div class="d-flex justify-content-center links">
-                        Não tem conta? <a href="cadastro.html">Cadastre-se</a>
+                        Não tem conta? <a href="cadastro.php">Cadastre-se</a>
                     </div>
                 </div>
             </div>

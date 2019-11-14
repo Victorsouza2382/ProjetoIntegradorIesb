@@ -21,13 +21,13 @@
         case 'cadastro':
             //cadastro
             $cadastro = new Cadastro();
-            $cadastro->validaLogin($_POST);
+            $cadastro->validaCadastro($_POST);
             //usuario
             $usuario = new Usuario();
             $id = $usuario->ultimo_id();
             //foto
             $foto = new Foto();
-            $foto->adicionarFoto("../img-usuarios/default_user_image.png", $id);
+            $foto->adicionarFoto($_POST, $id);
             //tipo da foto
             $tipo_foto = new TipoFoto();
             $tipo_foto->salvar_tipo_foto($id, 'perfil');
